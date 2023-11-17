@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Whitewater Rafting Vacations | SplashDown Rafting | Book</title>
+</head>
+<body>
+<div id="content">
+    <header>
+        <a id="logo_link" href="index.html">
+            <img class="logo" src="images/logo.png" alt="SplashDown Rafting Logo">
+        </a>
+        <nav>
+            <div class="navigation">
+                <a href="index.html">Home</a>
+            </div>
+            <div class="navigation">
+                <a href="book.html">Book</a>
+            </div>
+            <div class="navigation">
+                <a href="site-plan-rafting.html">Site Plan</a>
+            </div>
+            <div class="navigation navigation-active">
+                <a href="contactus.html">Contact Us</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div id="feedback"></div>
+
+        <form class="book-form" action="" method="post" style="max-width: 500px; margin: 20px 20px">
+            <div class="form-control">
+                <label for="full-name">Full Name *</label>
+                <div class="border-wrapper">
+                    <input required name="full-name" id="full-name" type="text" class="effect-border" />
+                    <span class="focus-border">
+                    <i></i>
+                  </span>
+                </div>
+            </div>
+            <div class="form-control">
+                <label for="email-customer">Email</label>
+                <div class="border-wrapper">
+                    <input id="email-customer" type="email" class="effect-border" />
+                    <span class="focus-border">
+                    <i></i>
+                   </span>
+                </div>
+            </div>
+            <div class="form-control">
+                <label for="text-description">Description</label>
+                <div class="border-wrapper">
+                    <textarea id="text-description" name="text-description" rows="5" style="width: 100%">
+
+                    </textarea>
+                    <span class="focus-border">
+                       <i></i>
+                   </span>
+                </div>
+            </div>
+            <button class="send-button">
+                Send
+            </button>
+        </form>
+    </main>
+    <footer>
+        <p>SplashDown Rafting &copy; 2023 - Your First and Last Name Here</p>
+        <p><a href="site-plan-rafting.html">Site Plan</a></p>
+        <p><a href="contactus.html">Contact Us</a></p>
+        <div class="social">
+            <a href="https://facebook.com" target="_blank">
+                <img src="images/facebook.png" alt="fb icon">
+            </a>
+            <a href="https://twitter.com" target="_blank">
+                <img src="images/twitter.png" alt="twitter icon">
+            </a>
+            <a href="https://instagram.com" target="_blank">
+                <img src="images/instagram.png" alt="instagram icon">
+            </a>
+        </div>
+    </footer>
+</div>
+<script>
+    // get the feedback div element so we can do something with it.
+    const feedbackElement = document.getElementById('feedback');
+    // get the form so we can read what was entered in it.
+    const formElement = document.forms[0];
+    // add a 'listener' to wait for a submission of our form. When that happens run the code below.
+    formElement.addEventListener('submit', function(e) {
+        // stop the form from doing the default action.
+        e.preventDefault();
+        // set the contents of our feedback element to a message letting the user know the form was submitted successfully. Notice that we pull the name that was entered in the form to personalize the message!
+        feedbackElement.innerHTML = 'Hello '+ formElement['full-name'].value +'! Thank you for your message. We will get back with you as soon as possible!';
+        // make the feedback element visible.
+        feedbackElement.style.display = "block";
+        // add a class to move everything down so our message doesn't cover it.
+        document.body.classList.toggle('moveDown');
+    });
+</script>
+</body>
+</html>
