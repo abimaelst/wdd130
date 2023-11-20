@@ -295,6 +295,7 @@ article:has(:hover, :focus) {
     background: var(--primary-color);
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     padding: 16px 24px;
 
     border-radius: 6px;
