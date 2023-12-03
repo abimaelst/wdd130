@@ -329,6 +329,24 @@ footer {
     background: var(--text-color);
 }
 
+.footer_links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.footer_links a {
+    color: white;
+    text-decoration: none;
+    transition: 0.4s all;
+}
+
+.footer_links a:hover {
+    border-bottom: 1px white solid;
+    animation: fade 1s;
+}
+
 .book-hero-left {
     max-width: 50%;
 }
@@ -454,4 +472,13 @@ footer div {
 
 footer img {
     width: 20%;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
